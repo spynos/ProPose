@@ -1,4 +1,4 @@
-"""propose URL Configuration
+"""propose_site URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/2.2/topics/http/urls/
@@ -19,5 +19,5 @@ from django.conf.urls import include, url
 
 urlpatterns = [
   path('admin/', admin.site.urls),
-  url(r'', include('head_pose.urls')),
+  url(r'', include('pose_app.urls')),
  ]

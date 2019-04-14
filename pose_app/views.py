@@ -7,7 +7,7 @@ from django.core.files.storage import FileSystemStorage
 
 
 def first_view(request):
-    return render(request, 'head_pose/first_view.html', {})
+    return render(request, 'pose_app/first_view.html', {})
 
 
 def uimage(request):
@@ -18,7 +18,7 @@ def uimage(request):
             fs = FileSystemStorage()
             filename = fs.save(myfile.name, myfile)
             uploaded_file_url = fs.url(filename)
-            return render(request, 'head_pose/uimage.html', {'form': form, 'uploaded_file_url': uploaded_file_url})
+            return render(request, 'pose_app/uimage.html', {'form': form, 'uploaded_file_url': uploaded_file_url})
     else:
         form = UploadImageForm()
-        return render(request, 'head_pose/uimage.html', {'form': form})
+        return render(request, 'pose_app/uimage.html', {'form': form})
