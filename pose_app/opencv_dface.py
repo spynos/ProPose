@@ -120,9 +120,9 @@ def opencv_dface(path):
         if pitch == 0:
             pitch_comment = str(int(pitch))
         elif pitch > 0:
-            pitch_comment = 'Up ' + str(int(pitch))
+            pitch_comment = 'Down ' + str(int(pitch))
         elif pitch < 0:
-            pitch_comment = 'Down ' + str(int(pitch * -1))
+            pitch_comment = 'Up ' + str(int(pitch * -1))
 
         if yaw == 0:
             yaw_comment = str(int(yaw))
